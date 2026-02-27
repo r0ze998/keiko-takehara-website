@@ -22,6 +22,7 @@
     <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap"
       rel="stylesheet"
@@ -64,7 +65,7 @@
             <li><a href="/faq/">FAQ</a></li>
             <li><a href="/contact/">お問い合わせ</a></li>
           </ul>
-          <a class="btn btn-primary" href="/booking/">ご予約</a>
+          <a class="btn btn-primary" href="/booking/">講座を探す</a>
         </nav>
         <button class="menu-toggle" type="button" aria-label="メニュー" data-menu-toggle aria-expanded="false">
           <span></span><span></span><span></span>
@@ -84,7 +85,7 @@
         <a href="/blog/">コラム</a>
         <a href="/faq/">FAQ</a>
         <a href="/contact/">お問い合わせ</a>
-        <a class="btn btn-primary" href="/booking/">ご予約</a>
+        <a class="btn btn-primary" href="/booking/">講座を探す</a>
       </div>
     </header>
 
@@ -137,101 +138,152 @@
             <button class="filter-btn active" type="button" data-filter="all">すべて</button>
             <button class="filter-btn" type="button" data-filter="seminar">セミナー</button>
             <button class="filter-btn" type="button" data-filter="counseling">カウンセリング</button>
+            <button class="filter-btn" type="button" data-filter="taikan">体感講座</button>
+            <button class="filter-btn" type="button" data-filter="life">LIFE</button>
             <button class="filter-btn" type="button" data-filter="corporate">企業研修</button>
+            <button class="filter-btn" type="button" data-filter="online">オンライン講座</button>
           </div>
 
           <div class="testimonial-grid">
             <article class="testimonial-card" data-filter-card data-category="seminar">
-              <p class="testimonial-meta">30代 女性 / IT企業PM</p>
-              <h3>「忙しさの中でも整える習慣ができた」</h3>
-              <p>朝の3分ルーティンで頭の切り替えがしやすくなり、子どもに怒る回数が減りました。</p>
-              <p class="stars">★★★★★</p>
+              <p class="testimonial-meta">原真由美さん / セミナー</p>
+              <h3>「楽しい記憶が弱い理由がわかった」</h3>
+              <p>悲しみを感じたくなくて小さくしたことで、喜びも小さくなった。この表裏一体にびっくりしました。幼少時代からの感情の切り方を、このセミナーで知ることができました。</p>
             </article>
             <article class="testimonial-card" data-filter-card data-category="seminar">
-              <p class="testimonial-meta">40代 男性 / 営業管理職</p>
-              <h3>「会議中の焦りが減った」</h3>
-              <p>セミナーで学んだ整理法を使うと、感情に引っ張られず議論を進められるようになりました。</p>
-              <p class="stars">★★★★★</p>
+              <p class="testimonial-meta">上阪英史さん / セミナー</p>
+              <h3>「不安の根本がお金ではないと気づけた」</h3>
+              <p>お金にフォーカスしまくっていましたが、不安や恐怖の根本がお金ではない、と強烈に感じました。本来の立ち位置を完全に忘れていたことに気付かされました。</p>
             </article>
             <article class="testimonial-card" data-filter-card data-category="seminar">
-              <p class="testimonial-meta">50代 女性 / 自営業</p>
-              <h3>「実践できる内容だった」</h3>
-              <p>抽象的な精神論ではなく、すぐ試せるワークが多く継続しやすいです。</p>
-              <p class="stars">★★★★☆</p>
+              <p class="testimonial-meta">原ことえさん / セミナー</p>
+              <h3>「亡き父の言葉として受け取れた」</h3>
+              <p>竹原さんのお父さんの「やり残したことはない」という最後の言葉を、私も亡き父の言葉として受け取らせていただきました。とても感動しました。</p>
             </article>
             <article class="testimonial-card" data-filter-card data-category="seminar">
-              <p class="testimonial-meta">20代 女性 / 医療職</p>
-              <h3>「感情の言語化ができた」</h3>
-              <p>モヤモヤを言葉にする手順がわかり、自分を責める時間が短くなりました。</p>
-              <p class="stars">★★★★★</p>
+              <p class="testimonial-meta">K.A.さん / セミナー</p>
+              <h3>「自分も周りも変わった」</h3>
+              <p>初めて参加したのは恵子先生のセミナーでした。あれから体感講座やライフコースにも参加し、今の自分が幸せなこと…自分と周りの状況は変わりました。</p>
             </article>
             <article class="testimonial-card" data-filter-card data-category="seminar">
-              <p class="testimonial-meta">30代 男性 / エンジニア</p>
-              <h3>「睡眠の質が上がった」</h3>
-              <p>夜のセルフケアを取り入れて寝つきが良くなり、翌朝の集中力が安定しました。</p>
-              <p class="stars">★★★★☆</p>
+              <p class="testimonial-meta">F.H.さん / セミナー</p>
+              <h3>「繰り返すパターンの発端がわかった」</h3>
+              <p>責任に傾き、最後に無責任になって逃げ出すパターンを繰り返していました。責任感という傾きが発端でした。驚きです。</p>
+            </article>
+            <article class="testimonial-card" data-filter-card data-category="seminar">
+              <p class="testimonial-meta">大西禮子さん / セミナー</p>
+              <h3>「気楽な動機が深い気づきに」</h3>
+              <p>特に何もない昼下がり、受けてみようかなぁと気楽な動機でしたが、置いてきぼりの感情が浮上してきました。大元がわかったら楽にもなりました。</p>
             </article>
 
             <article class="testimonial-card" data-filter-card data-category="counseling">
-              <p class="testimonial-meta">30代 女性 / 小売業</p>
-              <h3>「自分の癖に気づけた」</h3>
-              <p>同じ悩みを繰り返す理由を整理でき、選択肢を持てるようになりました。</p>
-              <p class="stars">★★★★★</p>
+              <p class="testimonial-meta">T.Y.さん / カウンセリング</p>
+              <h3>「1年の総まとめのようなカウンセリング」</h3>
+              <p>申し込み後に体験が起きて深まって、受講前日にすべてが終わってしまい、その確認作業のようなカウンセリングとなりました。豊かな豊かなカウンセリングでした。</p>
             </article>
             <article class="testimonial-card" data-filter-card data-category="counseling">
-              <p class="testimonial-meta">40代 男性 / 経営者</p>
-              <h3>「部下への関わり方が変わった」</h3>
-              <p>問題解決を急ぐ前に聴く姿勢を持てるようになり、面談の質が上がりました。</p>
-              <p class="stars">★★★★★</p>
+              <p class="testimonial-meta">T.M.さん / カウンセリング</p>
+              <h3>「感情の突破ができた」</h3>
+              <p>なんともしようのなかった感情の突破ができました。恵子先生の穏やかで思い遣りにあふれたカウンセリングでしか出せなかった。そう感じてます。</p>
             </article>
             <article class="testimonial-card" data-filter-card data-category="counseling">
-              <p class="testimonial-meta">50代 女性 / 教育関係</p>
-              <h3>「心の余白ができた」</h3>
-              <p>週1回の振り返りで、抱え込みすぎる前に休む判断ができるようになりました。</p>
-              <p class="stars">★★★★☆</p>
+              <p class="testimonial-meta">O.K.さん / カウンセリング</p>
+              <h3>「元の位置に戻してもらえた」</h3>
+              <p>思考で一杯一杯になっていたので、カウンセリング受けて元の位置に戻して貰った感じで、楽になりました。これからは思う存分楽しんで生きていこうと思います。</p>
             </article>
             <article class="testimonial-card" data-filter-card data-category="counseling">
-              <p class="testimonial-meta">30代 男性 / メーカー</p>
-              <h3>「家庭での衝突が減少」</h3>
-              <p>言い方を変えるだけで、パートナーとの会話が落ち着くことを体感しました。</p>
-              <p class="stars">★★★★★</p>
+              <p class="testimonial-meta">M.S.さん / カウンセリング</p>
+              <h3>「心が解きほぐれていった」</h3>
+              <p>丁寧に聞いてくださるなか心も一緒に解きほぐれていくようでした。自分が観ようと思う思わないに関わらずシステムは機能しています。ものすごい衝撃を受けました。</p>
             </article>
             <article class="testimonial-card" data-filter-card data-category="counseling">
-              <p class="testimonial-meta">40代 女性 / 公務員</p>
-              <h3>「仕事の境界線を引けた」</h3>
-              <p>責任感の強さと無理の境目が明確になり、残業時間を見直せました。</p>
-              <p class="stars">★★★★☆</p>
+              <p class="testimonial-meta">S.Y.さん / カウンセリング</p>
+              <h3>「気持ちを認めたら楽になった」</h3>
+              <p>とても簡単な事なのに今までしてなかったことに驚きました。今は気持ちが楽になっています。</p>
+            </article>
+            <article class="testimonial-card" data-filter-card data-category="counseling">
+              <p class="testimonial-meta">K.A.さん / カウンセリング</p>
+              <h3>「根本原因を解除してもらえた」</h3>
+              <p>パニック状態でカウンセリングを受講しましたが、丁寧に聴いてくださって気持ちが緩みました。根本原因を解除して頂いたこと、心より感謝しています。</p>
+            </article>
+
+            <article class="testimonial-card" data-filter-card data-category="taikan">
+              <p class="testimonial-meta">岡田ゆらさん / 体感講座</p>
+              <h3>「自分を知ることが趣味になった」</h3>
+              <p>自分の深いところまで入っていき、受け取ったものが多く、とても感動致しました。自分を知っていくことを今は趣味のように楽しんでいます。</p>
+            </article>
+            <article class="testimonial-card" data-filter-card data-category="taikan">
+              <p class="testimonial-meta">T.K.さん / 体感講座</p>
+              <h3>「温かさを感じることができた」</h3>
+              <p>恵子先生は全身から温かいものが溢れ出ていて、僕はそれを感じることができました。ミロスの素晴らしさを受け取ることができた体感講座でした。</p>
+            </article>
+
+            <article class="testimonial-card" data-filter-card data-category="life">
+              <p class="testimonial-meta">清山幸子さん / LIFE</p>
+              <h3>「『怖かった』と言えて解放された」</h3>
+              <p>自分を戒め、強迫観念に怯えて、それを隠して生きてきた事をハッキリとさせ「怖かった」と言えたことで解放感を感じました。今とても軽い気分です。</p>
+            </article>
+            <article class="testimonial-card" data-filter-card data-category="life">
+              <p class="testimonial-meta">N.Y.さん / LIFE</p>
+              <h3>「人間関係の根本に気づけた」</h3>
+              <p>分かってもらいたい！と思いながらも「どうせ分かってもらえない」と思っていた事に気付きました。諦めからスタートしてたら、分かってもらえるはずはありません。</p>
+            </article>
+            <article class="testimonial-card" data-filter-card data-category="life">
+              <p class="testimonial-meta">平石真さん / LIFE</p>
+              <h3>「仕組みがはっきり感じられた」</h3>
+              <p>今回はなぜミラクルが起きるのかという仕組みをはっきり感じることができました。俯瞰度が確実に上がりました。</p>
+            </article>
+            <article class="testimonial-card" data-filter-card data-category="life">
+              <p class="testimonial-meta">K.M.さん / LIFE</p>
+              <h3>「いい子のパターンから解放された」</h3>
+              <p>表面上何か取り繕う、いい子のパターン！講師に出させてもらったことでハッキリしました。それだけでとっても解放されました。ますます自己信頼を感じています！</p>
             </article>
 
             <article class="testimonial-card" data-filter-card data-category="corporate">
               <p class="testimonial-meta">人事担当 / IT企業</p>
               <h3>「現場で使える研修だった」</h3>
               <p>研修直後から1on1の雰囲気が変わり、参加者満足度も高評価でした。</p>
-              <p class="stars">★★★★★</p>
             </article>
             <article class="testimonial-card" data-filter-card data-category="corporate">
               <p class="testimonial-meta">総務担当 / 製造業</p>
               <h3>「管理職の言葉が変わった」</h3>
               <p>注意喚起中心だった会話が、対話型のフィードバックに変わりました。</p>
-              <p class="stars">★★★★★</p>
             </article>
             <article class="testimonial-card" data-filter-card data-category="corporate">
               <p class="testimonial-meta">教育担当 / 医療法人</p>
               <h3>「継続しやすい設計」</h3>
               <p>単発で終わらない振り返りシートがあり、実務に落とし込みやすかったです。</p>
-              <p class="stars">★★★★☆</p>
             </article>
             <article class="testimonial-card" data-filter-card data-category="corporate">
               <p class="testimonial-meta">経営企画 / サービス業</p>
               <h3>「社内稟議が通しやすい」</h3>
               <p>目的と成果指標が明確で、導入説明がしやすい研修プログラムでした。</p>
-              <p class="stars">★★★★★</p>
             </article>
             <article class="testimonial-card" data-filter-card data-category="corporate">
               <p class="testimonial-meta">管理部 / 教育機関</p>
               <h3>「職員の不調予防に役立つ」</h3>
               <p>ストレスが高まる時期に合わせた内容で、参加者からの再実施要望が増えました。</p>
-              <p class="stars">★★★★☆</p>
+            </article>
+
+            <article class="testimonial-card" data-filter-card data-category="online">
+              <p class="testimonial-meta">30代 女性 / 会社員</p>
+              <h3>「通勤時間が学びの時間に」</h3>
+              <p>動画なので電車の中でも学べます。繰り返し見返せるのが一番のメリットでした。</p>
+            </article>
+            <article class="testimonial-card" data-filter-card data-category="online">
+              <p class="testimonial-meta">40代 男性 / フリーランス</p>
+              <h3>「自分のペースで進められる」</h3>
+              <p>対面は日程が合わず諦めていましたが、オンラインなら深夜でも学習できて助かりました。</p>
+            </article>
+            <article class="testimonial-card" data-filter-card data-category="online">
+              <p class="testimonial-meta">20代 女性 / 大学院生</p>
+              <h3>「体系的に学べる構成が良い」</h3>
+              <p>本やSNSで断片的に知っていた内容が、講座を通して一つにつながりました。</p>
+            </article>
+            <article class="testimonial-card" data-filter-card data-category="online">
+              <p class="testimonial-meta">50代 女性 / 主婦</p>
+              <h3>「家事の合間に少しずつ」</h3>
+              <p>1本が短いので、料理の合間に少しずつ進められました。子育ての悩みにも応用できています。</p>
             </article>
           </div>
         </div>
@@ -273,6 +325,27 @@
           </div>
         </div>
       </section>
+
+      <section class="page-section">
+        <div class="container">
+          <div class="cta-band cta-band--dual">
+            <div>
+              <h2>次はあなたの番です</h2>
+              <p>多くの方が一歩を踏み出し、日常に変化を感じています。</p>
+            </div>
+            <div class="cta-band-actions">
+              <a class="btn btn-secondary btn-external" href="https://m.mirossacademy.online/?utm_source=keiko-balance&amp;utm_medium=website&amp;utm_content=online" target="_blank" rel="noopener noreferrer">
+                オンライン講座
+                <svg class="icon-external" viewBox="0 0 16 16" aria-hidden="true"><path d="M12 4L4 12M12 4H6M12 4v6"/></svg>
+              </a>
+              <a class="btn btn-secondary btn-external" href="https://www.mirossacademy.com/tcher/keiko_takehara/?utm_source=keiko-balance&amp;utm_medium=website&amp;utm_content=inperson" target="_blank" rel="noopener noreferrer">
+                リモート・対面講座
+                <svg class="icon-external" viewBox="0 0 16 16" aria-hidden="true"><path d="M12 4L4 12M12 4H6M12 4v6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -293,7 +366,9 @@
               <li><a href="/blog/">コラム</a></li>
               <li><a href="/faq/">FAQ</a></li>
               <li><a href="/contact/">お問い合わせ</a></li>
-              <li><a href="/booking/">予約</a></li>
+              <li><a href="/booking/">講座を探す</a></li>
+              <li><a href="https://m.mirossacademy.online/?utm_source=keiko-balance&amp;utm_medium=website&amp;utm_content=online" target="_blank" rel="noopener noreferrer">オンライン講座</a></li>
+              <li><a href="https://www.mirossacademy.com/tcher/keiko_takehara/?utm_source=keiko-balance&amp;utm_medium=website&amp;utm_content=inperson" target="_blank" rel="noopener noreferrer">リモート・対面講座</a></li>
             </ul>
           </section>
           <section>
