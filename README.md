@@ -7,50 +7,56 @@
 | 項目 | 内容 |
 |------|------|
 | マークアップ | HTML5 (セマンティック、ARIA対応) |
-| スタイル | CSS3 (カスタムプロパティ、clamp、IntersectionObserver) |
+| スタイル | CSS3 (カスタムプロパティ、clamp、Grid / Flexbox) |
 | スクリプト | Vanilla JavaScript ES Modules (ビルドツールなし) |
-| フォント | Google Fonts (Noto Sans JP / Noto Serif JP / Cormorant Garamond) |
+| フォント | Google Fonts (Noto Sans JP / Noto Serif JP / Cormorant Garamond / Source Sans 3) |
 | SEO | Schema.org 構造化データ、OGP、Twitter Card、sitemap.xml |
 
 ## ディレクトリ構成
 
 ```
 keiko/
-├── index.html
-├── about/index.html
+├── index.html                          # トップページ
+├── about/index.html                    # 講師紹介
 ├── services/
-│   ├── index.html
-│   ├── seminar/index.html
-│   ├── counseling/index.html
-│   └── corporate/index.html
-├── testimonials/index.html
+│   ├── index.html                      # サービス概要
+│   ├── seminar/index.html              # セミナー詳細
+│   ├── counseling/index.html           # カウンセリング詳細
+│   └── corporate/index.html            # 企業向けサービス
+├── testimonials/index.html             # 実績・お客様の声
 ├── blog/
-│   ├── index.html
-│   ├── mindful-breathing/index.html
-│   ├── sleep-reset/index.html
-│   └── boundary-communication/index.html
-├── faq/index.html
+│   ├── index.html                      # コラム一覧
+│   ├── unconscious-clutter/index.html  # 片付けられないのは誰？
+│   ├── emotion-mechanism/index.html    # 感情の仕組みを知ると人間関係が変わる
+│   ├── self-esteem-habits/index.html   # 自己肯定感を育てる5つの小さな習慣
+│   ├── life-themes/index.html          # あなたの人生を動かす3つのテーマとは
+│   ├── relationship-mirror/index.html  # 目の前の人は自分の鏡
+│   ├── mindful-breathing/index.html    # 3分でできる朝のマインドフル呼吸法
+│   ├── sleep-reset/index.html          # 仕事ストレスで眠れない夜の整え方
+│   └── boundary-communication/index.html # 人間関係で疲れない境界線の引き方
+├── faq/index.html                      # よくある質問
 ├── contact/
-│   ├── index.html
-│   └── thanks/index.html
-├── booking/index.html
-├── privacy/index.html
-├── legal/index.html
+│   ├── index.html                      # お問い合わせフォーム
+│   └── thanks/index.html              # 送信完了
+├── booking/index.html                  # 講座を探す
+├── privacy/index.html                  # プライバシーポリシー
+├── legal/index.html                    # 特定商取引法に基づく表記
 ├── sitemap.xml
 ├── robots.txt
+├── package.json
 └── assets/
     ├── css/
-    │   └── style.css          # 全スタイル（デザイントークン → コンポーネント → レスポンシブ）
+    │   └── style.css                   # 全スタイル（トークン → コンポーネント → レスポンシブ）
     ├── js/
-    │   ├── main.js            # エントリーポイント・モジュール初期化
-    │   ├── nav.js             # モバイルメニュー・ドロップダウン・スクロールロック
-    │   ├── animations.js      # フェードイン・カウントアップ (ease-out)
-    │   ├── carousel.js        # お客様の声カルーセル（タイマーリセット対応）
-    │   ├── accordion.js       # FAQ アコーディオン
-    │   ├── filter.js          # 実績カテゴリフィルター
-    │   ├── cookie.js          # Cookie同意バナー
-    │   ├── form.js            # お問い合わせフォームバリデーション
-    │   └── utils.js           # フッター年表示など
+    │   ├── main.js                     # エントリーポイント
+    │   ├── nav.js                      # モバイルメニュー・ドロップダウン
+    │   ├── animations.js              # フェードイン・カウントアップ
+    │   ├── carousel.js                # お客様の声カルーセル
+    │   ├── accordion.js               # FAQ アコーディオン
+    │   ├── filter.js                  # カテゴリフィルター
+    │   ├── cookie.js                  # Cookie同意バナー
+    │   ├── form.js                    # フォームバリデーション
+    │   └── utils.js                   # フッター年表示
     ├── images/
     │   ├── favicon.svg
     │   └── logo.svg
@@ -59,40 +65,69 @@ keiko/
         └── corporate-program-overview.txt
 ```
 
-## ページ一覧
+## ページ一覧（22ページ）
 
 | パス | 内容 |
 |------|------|
-| `/` | トップ（ヒーロー・実績数値・お客様の声・ブログ抜粋・CTA） |
+| `/` | トップ（ヒーロー・実績数値・お客様の声・最新コラム・CTA） |
 | `/about/` | 講師プロフィール・経歴タイムライン |
 | `/services/` | サービス概要 |
 | `/services/seminar/` | セミナー詳細・料金 |
 | `/services/counseling/` | カウンセリング詳細・料金 |
 | `/services/corporate/` | 企業向け研修・資料DL |
 | `/testimonials/` | 実績・お客様の声（カテゴリフィルター付き） |
-| `/blog/` | コラム一覧 |
-| `/blog/mindful-breathing/` | コラム記事1 |
-| `/blog/sleep-reset/` | コラム記事2 |
-| `/blog/boundary-communication/` | コラム記事3 |
+| `/blog/` | コラム一覧（8記事 + note.com 埋め込み） |
+| `/blog/unconscious-clutter/` | 片付けられないのは誰？ ― 無意識の心に気づく時 |
+| `/blog/emotion-mechanism/` | 感情の仕組みを知ると人間関係が変わる |
+| `/blog/self-esteem-habits/` | 自己肯定感を育てる5つの小さな習慣 |
+| `/blog/life-themes/` | あなたの人生を動かす3つのテーマとは |
+| `/blog/relationship-mirror/` | 目の前の人は自分の鏡 ― 関係性が教えてくれること |
+| `/blog/mindful-breathing/` | 3分でできる朝のマインドフル呼吸法 |
+| `/blog/sleep-reset/` | 仕事ストレスで眠れない夜の整え方 |
+| `/blog/boundary-communication/` | 人間関係で疲れない境界線の引き方 |
 | `/faq/` | よくある質問（アコーディオン・FAQPage構造化データ） |
 | `/contact/` | お問い合わせフォーム（バリデーション・ハニーポット） |
 | `/contact/thanks/` | 送信完了ページ |
-| `/booking/` | 予約ページ（iframe埋め込みプレースホルダー） |
+| `/booking/` | 講座を探す（オンライン / リモート対面の2パスウェイ選択） |
 | `/privacy/` | プライバシーポリシー |
 | `/legal/` | 特定商取引法に基づく表記 |
 
 ## ローカルプレビュー
 
 ```bash
-cd /Users/r0ze/keiko
-npm run preview
-# → http://localhost:8080
+npx serve . -l 3000
+# → http://localhost:3000
 ```
 
-> **注意**: `python3 -m http.server` は必ず keiko ディレクトリ内で実行してください。
-> HTML で `/assets/...` の絶対パスを使用しているため、ルートが keiko である必要があります。
+## CSS 設計
 
-## JS モジュール詳細
+デザイントークンを `:root` で一元管理し、色・透明度バリエーションもCSS変数化しています。
+
+```css
+/* パレット */
+--color-forest / --color-gold / --color-ivory / --color-navy / --color-sage / --color-lavender
+
+/* 透明度バリエーション（forest / sage / lavender） */
+--forest-8 〜 --forest-35
+--sage-15 〜 --sage-65
+--lavender-35 / --lavender-45
+
+/* ショートハンドボーダー */
+--border-light / --border-subtle
+
+/* スペーシング */
+--space-xs 〜 --space-xxl
+
+/* エレベーション */
+--shadow-card / --shadow-hover
+
+/* レスポンシブブレークポイント */
+@media (max-width: 1023px)   /* タブレット */
+@media (max-width: 767px)    /* モバイル */
+@media (prefers-reduced-motion: reduce)
+```
+
+## JS モジュール
 
 | ファイル | 役割 | 主な機能 |
 |---------|------|---------|
@@ -101,38 +136,18 @@ npm run preview
 | `animations.js` | アニメーション | `.fade-in` IntersectionObserver・ease-out カウントアップ |
 | `carousel.js` | カルーセル | prev/next・6秒自動送り（手動操作でタイマーリセット） |
 | `accordion.js` | アコーディオン | `aria-expanded` トグル・`hidden` 属性制御 |
-| `filter.js` | フィルター | `data-category` によるカード表示切替（CSS クラス方式） |
+| `filter.js` | フィルター | `data-category` によるカード表示切替 |
 | `cookie.js` | Cookie同意 | localStorage でバナー表示状態管理 |
 | `form.js` | フォーム | 必須チェック・メール形式・ハニーポット・GA4 イベント |
 | `utils.js` | ユーティリティ | フッター著作権年の動的更新 |
-
-## CSS 設計
-
-```
-/* デザイントークン（CSS カスタムプロパティ）*/
---color-forest / --color-gold / --color-ivory / --color-navy / --color-sage
---space-xs 〜 --space-xxl
---shadow-card / --shadow-hover
---radius-button / --radius-card / --container / --touch-min
-
-/* レスポンシブブレークポイント */
-@media (max-width: 1023px)  /* タブレット */
-@media (max-width: 767px)   /* モバイル */
-```
 
 ## 実運用時に接続が必要な項目
 
 | 項目 | 説明 |
 |------|------|
-| 予約 iframe | Calendly / STORES予約 / Square予約 などの実URL |
+| 講座申込 | ミロスアカデミーオンライン / ミロスアカデミーに外部リンク済み |
 | フォーム送信 | バックエンド API（自動返信メール・管理者通知・DB保存） |
 | アナリティクス | GA4 / GTM の本番 Measurement ID |
 | Search Console | 本番ドメインで所有権確認 |
 | SNS・連絡先 | 公式 SNS URL・電話番号・事業者所在地 |
-| OGP 画像 | `/og-image.jpg` などの本番用画像ファイル |
-
-## アセット
-
-- 共通スタイル: `assets/css/style.css`
-- 共通スクリプト: `assets/js/main.js` (ES modules)
-- 企業向け資料: `assets/docs/corporate-program-overview.pdf` / `.txt`
+| OGP 画像 | 本番用 OGP 画像ファイル |

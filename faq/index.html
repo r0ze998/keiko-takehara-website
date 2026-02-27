@@ -22,6 +22,7 @@
     <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap"
       rel="stylesheet"
@@ -62,6 +63,46 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "当サイトのサービスは医療行為・診断を目的としたものではありません。必要に応じて医療機関をご利用ください。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "セミナーで言う「人生のテーマ」とは何ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "私たちが無意識に抱えている行動パターンの根源のことです。「想像力と自信」「理想と受容」「信頼と解放」などがあり、セミナーではこのテーマを体感的に理解していきます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "「分離」や「統合」とはどういう意味ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "物事を「良い・悪い」と二つに分けて判断する世界（分離）の仕組みを理解し、分かれていた二つの側面を一つに戻していく（統合）ことで、繰り返す悩みのパターンから抜け出していけるという考え方です。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "「目の前の人は自分の鏡」とはどういうことですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "自分が無意識に抑圧しているものが、目の前の相手の言動を通じて映し出されるという仕組みです。苦手な相手や繰り返す人間関係のパターンは、自分の内面を知るための手がかりになります。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "オンライン講座とリモート講座の違いは何ですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "オンライン講座は録画済みの動画を自分のペースで視聴する形式です。リモート講座はZoomなどでリアルタイムに講師と対話しながら学ぶ形式です。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "オンライン講座はどこで受講できますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ミロスアカデミーオンライン（m.mirossacademy.online）で受講できます。スマートフォン・PC・タブレットに対応しています。"
             }
           }
         ]
@@ -104,7 +145,7 @@
             <li><a href="/faq/" aria-current="page">FAQ</a></li>
             <li><a href="/contact/">お問い合わせ</a></li>
           </ul>
-          <a class="btn btn-primary" href="/booking/">ご予約</a>
+          <a class="btn btn-primary" href="/booking/">講座を探す</a>
         </nav>
         <button class="menu-toggle" type="button" aria-label="メニュー" data-menu-toggle aria-expanded="false">
           <span></span><span></span><span></span>
@@ -124,7 +165,7 @@
         <a href="/blog/">コラム</a>
         <a href="/faq/">FAQ</a>
         <a href="/contact/">お問い合わせ</a>
-        <a class="btn btn-primary" href="/booking/">ご予約</a>
+        <a class="btn btn-primary" href="/booking/">講座を探す</a>
       </div>
     </header>
 
@@ -177,6 +218,42 @@
                 <p>一部講座で期間限定アーカイブを提供しています。開催ごとに案内をご確認ください。</p>
               </div>
             </div>
+            <div class="faq-item">
+              <button type="button" data-accordion-trigger aria-expanded="false" aria-controls="faq-sem4">
+                セミナーで言う「人生のテーマ」とは何ですか？
+                <span class="icon" aria-hidden="true">＋</span>
+              </button>
+              <div id="faq-sem4" class="faq-answer" hidden>
+                <p>私たちが無意識に抱えている行動パターンの根源のことです。「想像力と自信」「理想と受容」「信頼と解放」などがあり、自分では気づかないまま人間関係や生き方に影響を与えています。セミナーではこのテーマを体感的に理解していきます。</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" data-accordion-trigger aria-expanded="false" aria-controls="faq-sem5">
+                「分離」や「統合」とはどういう意味ですか？
+                <span class="icon" aria-hidden="true">＋</span>
+              </button>
+              <div id="faq-sem5" class="faq-answer" hidden>
+                <p>私たちは物事を「良い・悪い」「好き・嫌い」と二つに分けて判断する世界（分離）で生きています。この分離の仕組みを理解し、分かれていた二つの側面を一つに戻していく（統合）ことで、繰り返す悩みのパターンから抜け出していけるという考え方です。</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" data-accordion-trigger aria-expanded="false" aria-controls="faq-sem6">
+                「目の前の人は自分の鏡」とはどういうことですか？
+                <span class="icon" aria-hidden="true">＋</span>
+              </button>
+              <div id="faq-sem6" class="faq-answer" hidden>
+                <p>自分が無意識に抑圧しているものが、目の前の相手の言動を通じて映し出されるという仕組みです。苦手な相手や繰り返す人間関係のパターンは、自分の内面を知るための手がかりになります。セミナーでは関係性を通じて自分を紐解いていきます。</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" data-accordion-trigger aria-expanded="false" aria-controls="faq-sem7">
+                セミナーではノートを取る必要がありますか？
+                <span class="icon" aria-hidden="true">＋</span>
+              </button>
+              <div id="faq-sem7" class="faq-answer" hidden>
+                <p>メモを取っていただいても構いませんが、頭で理解するよりも空間全体で体感することを大切にしています。書くことより感じることに集中していただくのがおすすめです。</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -210,6 +287,41 @@
               </button>
               <div id="faq6" class="faq-answer" hidden>
                 <p>必須ではありません。初回で目的を確認し、必要に応じてご提案します。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="container">
+          <h2>オンライン講座について</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button type="button" data-accordion-trigger aria-expanded="false" aria-controls="faq-online1">
+                オンライン講座とリモート講座の違いは何ですか？
+                <span class="icon" aria-hidden="true">＋</span>
+              </button>
+              <div id="faq-online1" class="faq-answer" hidden>
+                <p>オンライン講座は録画済みの動画を自分のペースで視聴する形式です。リモート講座はZoomなどでリアルタイムに講師と対話しながら学ぶ形式です。</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" data-accordion-trigger aria-expanded="false" aria-controls="faq-online2">
+                オンライン講座はどこで受講できますか？
+                <span class="icon" aria-hidden="true">＋</span>
+              </button>
+              <div id="faq-online2" class="faq-answer" hidden>
+                <p>ミロスアカデミーオンライン（m.mirossacademy.online）で受講できます。スマートフォン・PC・タブレットに対応しています。</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button type="button" data-accordion-trigger aria-expanded="false" aria-controls="faq-online3">
+                動画の視聴期限はありますか？
+                <span class="icon" aria-hidden="true">＋</span>
+              </button>
+              <div id="faq-online3" class="faq-answer" hidden>
+                <p>講座によって異なります。詳細はオンライン講座の各コースページでご確認ください。</p>
               </div>
             </div>
           </div>
@@ -267,6 +379,18 @@
           </section>
         </div>
       </section>
+
+      <section class="page-section">
+        <div class="container">
+          <div class="cta-band">
+            <div>
+              <h2>疑問が解消したら、次のステップへ</h2>
+              <p>あなたに合った学び方を見つけましょう。</p>
+            </div>
+            <a class="btn btn-secondary" href="/booking/">講座を探す</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -287,7 +411,9 @@
               <li><a href="/blog/">コラム</a></li>
               <li><a href="/faq/">FAQ</a></li>
               <li><a href="/contact/">お問い合わせ</a></li>
-              <li><a href="/booking/">予約</a></li>
+              <li><a href="/booking/">講座を探す</a></li>
+              <li><a href="https://m.mirossacademy.online/?utm_source=keiko-balance&amp;utm_medium=website&amp;utm_content=online" target="_blank" rel="noopener noreferrer">オンライン講座</a></li>
+              <li><a href="https://www.mirossacademy.com/tcher/keiko_takehara/?utm_source=keiko-balance&amp;utm_medium=website&amp;utm_content=inperson" target="_blank" rel="noopener noreferrer">リモート・対面講座</a></li>
             </ul>
           </section>
           <section>

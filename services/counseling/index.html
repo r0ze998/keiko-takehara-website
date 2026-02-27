@@ -22,6 +22,7 @@
     <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap"
       rel="stylesheet"
@@ -66,7 +67,7 @@
             <li><a href="/faq/">FAQ</a></li>
             <li><a href="/contact/">お問い合わせ</a></li>
           </ul>
-          <a class="btn btn-primary" href="/booking/">ご予約</a>
+          <a class="btn btn-primary" href="/booking/">講座を探す</a>
         </nav>
         <button class="menu-toggle" type="button" aria-label="メニュー" data-menu-toggle aria-expanded="false">
           <span></span><span></span><span></span>
@@ -86,7 +87,7 @@
         <a href="/blog/">コラム</a>
         <a href="/faq/">FAQ</a>
         <a href="/contact/">お問い合わせ</a>
-        <a class="btn btn-primary" href="/booking/">ご予約</a>
+        <a class="btn btn-primary" href="/booking/">講座を探す</a>
       </div>
     </header>
 
@@ -174,7 +175,7 @@
                 <span class="step-no">1</span>
                 <div>
                   <strong>予約</strong>
-                  <p>予約ページから希望日時と形式を選択。</p>
+                  <p>講座ページから希望日時と形式を選択。</p>
                 </div>
               </li>
               <li>
@@ -287,12 +288,21 @@
 
       <section class="page-section">
         <div class="container">
-          <div class="cta-band">
+          <div class="cta-band cta-band--dual">
             <div>
               <h2>カウンセリングを予約する</h2>
               <p>現在のお悩みを簡単に記入していただくと、初回面談がスムーズになります。</p>
             </div>
-            <a class="btn btn-secondary" href="/booking/">予約ページへ</a>
+            <div class="cta-band-actions">
+              <a class="btn btn-secondary btn-external" href="https://www.mirossacademy.com/tcher/keiko_takehara/?utm_source=keiko-balance&amp;utm_medium=website&amp;utm_content=inperson" target="_blank" rel="noopener noreferrer">
+                日程を確認する
+                <svg class="icon-external" viewBox="0 0 16 16" aria-hidden="true"><path d="M12 4L4 12M12 4H6M12 4v6"/></svg>
+              </a>
+              <a class="btn btn-secondary btn-external" href="https://m.mirossacademy.online/?utm_source=keiko-balance&amp;utm_medium=website&amp;utm_content=online" target="_blank" rel="noopener noreferrer">
+                オンライン講座
+                <svg class="icon-external" viewBox="0 0 16 16" aria-hidden="true"><path d="M12 4L4 12M12 4H6M12 4v6"/></svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -316,7 +326,9 @@
               <li><a href="/blog/">コラム</a></li>
               <li><a href="/faq/">FAQ</a></li>
               <li><a href="/contact/">お問い合わせ</a></li>
-              <li><a href="/booking/">予約</a></li>
+              <li><a href="/booking/">講座を探す</a></li>
+              <li><a href="https://m.mirossacademy.online/?utm_source=keiko-balance&amp;utm_medium=website&amp;utm_content=online" target="_blank" rel="noopener noreferrer">オンライン講座</a></li>
+              <li><a href="https://www.mirossacademy.com/tcher/keiko_takehara/?utm_source=keiko-balance&amp;utm_medium=website&amp;utm_content=inperson" target="_blank" rel="noopener noreferrer">リモート・対面講座</a></li>
             </ul>
           </section>
           <section>
