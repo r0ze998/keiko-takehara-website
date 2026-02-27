@@ -25,6 +25,7 @@
     <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" />
     <link rel="dns-prefetch" href="https://images.unsplash.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap"
@@ -32,8 +33,9 @@
     />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="preload" as="image" href="https://www.mirossacademy.com/wp-content/uploads/2022/02/7A3A9782-sqs-300x300.jpg" />
-    <link rel="prefetch" href="/services/seminar/" />
     <link rel="prefetch" href="/booking/" />
+    <link rel="prefetch" href="/services/" />
+    <link rel="prefetch" href="/blog/" />
     <script>
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: 'page_view' });
@@ -119,7 +121,7 @@
             <li><a href="/faq/">FAQ</a></li>
             <li><a href="/contact/">お問い合わせ</a></li>
           </ul>
-          <a class="btn btn-primary" href="/booking/">ご予約</a>
+          <a class="btn btn-primary" href="/booking/">講座を探す</a>
         </nav>
         <button class="menu-toggle" type="button" aria-label="メニュー" data-menu-toggle aria-expanded="false">
           <span></span><span></span><span></span>
@@ -139,7 +141,7 @@
         <a href="/blog/">コラム</a>
         <a href="/faq/">FAQ</a>
         <a href="/contact/">お問い合わせ</a>
-        <a class="btn btn-primary" href="/booking/">ご予約</a>
+        <a class="btn btn-primary" href="/booking/">講座を探す</a>
       </div>
     </header>
 
@@ -155,8 +157,8 @@
               セミナーとカウンセリングを通して「自分を責めない心の習慣」をお届けします。
             </p>
             <div class="hero-cta">
-              <a class="btn btn-primary" href="/services/seminar/">セミナーを見る</a>
-              <a class="btn btn-secondary" href="/contact/">無料相談する</a>
+              <a class="btn btn-primary" href="/booking/">講座を探す</a>
+              <a class="btn btn-secondary" href="/services/">サービスを見る</a>
             </div>
             <p><small>医療行為ではなく、日常のセルフケアと対話に重点を置いた支援です。</small></p>
           </div>
@@ -168,6 +170,7 @@
                 width="640"
                 height="640"
                 loading="eager"
+                fetchpriority="high"
               />
             </figure>
             <div class="hero-badge">
@@ -293,36 +296,36 @@
           <div class="grid-3">
             <article class="card blog-card fade-in">
               <img
-                src="https://images.unsplash.com/photo-1474418397713-7ede21d49118?auto=format&fit=crop&w=960&q=80"
-                alt="朝の深呼吸をする女性"
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=960&q=80"
+                alt="整理された棚と温かな光が差し込む部屋"
                 loading="lazy"
                 width="960"
                 height="600"
               />
-              <h3><a href="/blog/mindful-breathing/">3分でできる朝のマインドフル呼吸法</a></h3>
-              <p>忙しい朝でも実践できる、心を落ち着かせる呼吸の手順を紹介します。</p>
+              <h3><a href="/blog/unconscious-clutter/">片付けられないのは誰？ ― 無意識の心に気づく時</a></h3>
+              <p>片付けたいのにできない原因は、意志の弱さではなく無意識の感情。親子関係から紐解く本当の理由を解説します。</p>
             </article>
             <article class="card blog-card fade-in">
               <img
-                src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=960&q=80"
-                alt="眠りの質を高める夜の空間"
+                src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=960&q=80"
+                alt="静かな湖面に映る空と木々"
                 loading="lazy"
                 width="960"
                 height="600"
               />
-              <h3><a href="/blog/sleep-reset/">仕事ストレスで眠れない夜の整え方</a></h3>
-              <p>睡眠前に心拍を落ち着かせるルーティンを、具体的に解説します。</p>
+              <h3><a href="/blog/emotion-mechanism/">感情の仕組みを知ると人間関係が変わる</a></h3>
+              <p>怒りや不安の裏にある本当の感情を理解し、反射的な反応を減らす方法を解説します。</p>
             </article>
             <article class="card blog-card fade-in">
               <img
-                src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=960&q=80"
-                alt="対話をする二人の手元"
+                src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=960&q=80"
+                alt="朝の光が差し込む穏やかな部屋"
                 loading="lazy"
                 width="960"
                 height="600"
               />
-              <h3><a href="/blog/boundary-communication/">人間関係で疲れない境界線の引き方</a></h3>
-              <p>優しさを保ちながら自分を守る、会話の境界線づくりを扱います。</p>
+              <h3><a href="/blog/self-esteem-habits/">自己肯定感を育てる5つの小さな習慣</a></h3>
+              <p>日常に取り入れやすい5つの実践で、自己肯定感を少しずつ育てる方法を紹介します。</p>
             </article>
           </div>
         </div>
@@ -330,14 +333,21 @@
 
       <section class="page-section">
         <div class="container">
-          <div class="cta-band fade-in">
+          <div class="cta-band cta-band--dual fade-in">
             <div>
-              <h2>まずは無料相談からはじめませんか</h2>
-              <p>
-                ご相談内容に合わせて、セミナー参加と個別カウンセリングのどちらが適しているかをご提案します。
-              </p>
+              <h2>あなたに合った学び方を見つけませんか</h2>
+              <p>オンライン動画で自分のペースで学ぶことも、講師と直接対話しながら学ぶこともできます。</p>
             </div>
-            <a class="btn btn-secondary" href="/booking/">予約ページへ</a>
+            <div class="cta-band-actions">
+              <a class="btn btn-secondary btn-external" href="https://m.mirossacademy.online/?utm_source=keiko-balance&amp;utm_medium=website&amp;utm_content=online" target="_blank" rel="noopener noreferrer">
+                オンライン講座
+                <svg class="icon-external" viewBox="0 0 16 16" aria-hidden="true"><path d="M12 4L4 12M12 4H6M12 4v6"/></svg>
+              </a>
+              <a class="btn btn-secondary btn-external" href="https://www.mirossacademy.com/tcher/keiko_takehara/?utm_source=keiko-balance&amp;utm_medium=website&amp;utm_content=inperson" target="_blank" rel="noopener noreferrer">
+                リモート・対面講座
+                <svg class="icon-external" viewBox="0 0 16 16" aria-hidden="true"><path d="M12 4L4 12M12 4H6M12 4v6"/></svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -361,7 +371,9 @@
               <li><a href="/blog/">コラム</a></li>
               <li><a href="/faq/">FAQ</a></li>
               <li><a href="/contact/">お問い合わせ</a></li>
-              <li><a href="/booking/">予約</a></li>
+              <li><a href="/booking/">講座を探す</a></li>
+              <li><a href="https://m.mirossacademy.online/?utm_source=keiko-balance&amp;utm_medium=website&amp;utm_content=online" target="_blank" rel="noopener noreferrer">オンライン講座</a></li>
+              <li><a href="https://www.mirossacademy.com/tcher/keiko_takehara/?utm_source=keiko-balance&amp;utm_medium=website&amp;utm_content=inperson" target="_blank" rel="noopener noreferrer">リモート・対面講座</a></li>
             </ul>
           </section>
           <section>
