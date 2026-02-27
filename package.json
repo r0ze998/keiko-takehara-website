@@ -1,6 +1,6 @@
 {
   "name": "keiko-takehara-website",
-  "description": "心のバランス セミナー講師 竹原景子 公式サイト",
+  "description": "心のバランス セミナー講師 竹原恵子 公式サイト",
   "private": true,
   "scripts": {
     "preview": "python3 -m http.server 8080",
