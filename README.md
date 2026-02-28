@@ -1,6 +1,6 @@
 # Keiko Takehara Official Website
 
-心のバランスを整える方法 セミナー講師「竹原恵子」公式サイトの静的実装です。
+ミロスアカデミー認定講師「竹原恵子」公式サイトの静的実装です。
 
 ## 技術スタック
 
@@ -26,14 +26,14 @@ keiko/
 ├── testimonials/index.html             # 実績・お客様の声
 ├── blog/
 │   ├── index.html                      # コラム一覧
-│   ├── unconscious-clutter/index.html  # 片付けられないのは誰？
-│   ├── emotion-mechanism/index.html    # 感情の仕組みを知ると人間関係が変わる
-│   ├── self-esteem-habits/index.html   # 自己肯定感を育てる5つの小さな習慣
-│   ├── life-themes/index.html          # あなたの人生を動かす3つのテーマとは
-│   ├── relationship-mirror/index.html  # 目の前の人は自分の鏡
-│   ├── mindful-breathing/index.html    # 3分でできる朝のマインドフル呼吸法
-│   ├── sleep-reset/index.html          # 仕事ストレスで眠れない夜の整え方
-│   └── boundary-communication/index.html # 人間関係で疲れない境界線の引き方
+│   ├── unconscious-clutter/            # 片付けられないのは誰？
+│   ├── emotion-mechanism/              # 感情の仕組みを知ると人間関係が変わる
+│   ├── self-esteem-habits/             # 自己肯定感を育てる5つの小さな習慣
+│   ├── life-themes/                    # あなたの人生を動かす3つのテーマとは
+│   ├── relationship-mirror/            # 目の前の人は自分の鏡
+│   ├── mindful-breathing/              # 3分でできる朝のマインドフル呼吸法
+│   ├── sleep-reset/                    # 仕事ストレスで眠れない夜の整え方
+│   └── boundary-communication/         # 人間関係で疲れない境界線の引き方
 ├── faq/index.html                      # よくある質問
 ├── contact/
 │   ├── index.html                      # お問い合わせフォーム
@@ -48,18 +48,27 @@ keiko/
     ├── css/
     │   └── style.css                   # 全スタイル（トークン → コンポーネント → レスポンシブ）
     ├── js/
-    │   ├── main.js                     # エントリーポイント
+    │   ├── main.js                     # エントリーポイント（年表示ユーティリティ含む）
     │   ├── nav.js                      # モバイルメニュー・ドロップダウン
     │   ├── animations.js              # フェードイン・カウントアップ
     │   ├── carousel.js                # お客様の声カルーセル
     │   ├── accordion.js               # FAQ アコーディオン
     │   ├── filter.js                  # カテゴリフィルター
     │   ├── cookie.js                  # Cookie同意バナー
-    │   ├── form.js                    # フォームバリデーション
-    │   └── utils.js                   # フッター年表示
+    │   └── form.js                    # フォームバリデーション
     ├── images/
     │   ├── favicon.svg
-    │   └── logo.svg
+    │   ├── logo.svg
+    │   ├── home/                      # トップページ用画像
+    │   │   ├── hero-portrait.jpg      # ヒーローセクション ポートレート
+    │   │   ├── concept-kyoto.jpg      # コンセプト 京都・桜
+    │   │   ├── service-seminar.jpg    # セミナー風景
+    │   │   ├── service-counseling.jpg # カウンセリングイメージ
+    │   │   └── service-corporate.jpg  # 企業向け登壇
+    │   └── about/                     # 講師紹介ページ用画像
+    │       ├── profile-portrait.jpg   # プロフィール写真
+    │       ├── stage-kyoto.jpg        # 国立京都国際会館 登壇
+    │       └── seminar-washitsu.jpg   # 和室セミナー風景
     └── docs/
         ├── corporate-program-overview.pdf
         └── corporate-program-overview.txt
@@ -70,21 +79,13 @@ keiko/
 | パス | 内容 |
 |------|------|
 | `/` | トップ（ヒーロー・実績数値・お客様の声・最新コラム・CTA） |
-| `/about/` | 講師プロフィール・経歴タイムライン |
+| `/about/` | 講師プロフィール・経歴タイムライン・メディア実績 |
 | `/services/` | サービス概要 |
 | `/services/seminar/` | セミナー詳細・料金 |
 | `/services/counseling/` | カウンセリング詳細・料金 |
 | `/services/corporate/` | 企業向け研修・資料DL |
 | `/testimonials/` | 実績・お客様の声（カテゴリフィルター付き） |
 | `/blog/` | コラム一覧（8記事 + note.com 埋め込み） |
-| `/blog/unconscious-clutter/` | 片付けられないのは誰？ ― 無意識の心に気づく時 |
-| `/blog/emotion-mechanism/` | 感情の仕組みを知ると人間関係が変わる |
-| `/blog/self-esteem-habits/` | 自己肯定感を育てる5つの小さな習慣 |
-| `/blog/life-themes/` | あなたの人生を動かす3つのテーマとは |
-| `/blog/relationship-mirror/` | 目の前の人は自分の鏡 ― 関係性が教えてくれること |
-| `/blog/mindful-breathing/` | 3分でできる朝のマインドフル呼吸法 |
-| `/blog/sleep-reset/` | 仕事ストレスで眠れない夜の整え方 |
-| `/blog/boundary-communication/` | 人間関係で疲れない境界線の引き方 |
 | `/faq/` | よくある質問（アコーディオン・FAQPage構造化データ） |
 | `/contact/` | お問い合わせフォーム（バリデーション・ハニーポット） |
 | `/contact/thanks/` | 送信完了ページ |
@@ -103,43 +104,27 @@ npx serve . -l 3000
 
 デザイントークンを `:root` で一元管理し、色・透明度バリエーションもCSS変数化しています。
 
-```css
-/* パレット */
---color-forest / --color-gold / --color-ivory / --color-navy / --color-sage / --color-lavender
-
-/* 透明度バリエーション（forest / sage / lavender） */
---forest-8 〜 --forest-35
---sage-15 〜 --sage-65
---lavender-35 / --lavender-45
-
-/* ショートハンドボーダー */
---border-light / --border-subtle
-
-/* スペーシング */
---space-xs 〜 --space-xxl
-
-/* エレベーション */
---shadow-card / --shadow-hover
-
-/* レスポンシブブレークポイント */
-@media (max-width: 1023px)   /* タブレット */
-@media (max-width: 767px)    /* モバイル */
-@media (prefers-reduced-motion: reduce)
+```
+パレット:     --color-forest (#ff6347) / --color-gold / --color-ivory / --color-navy / --color-sage / --color-lavender
+透明度:       --forest-5 〜 --forest-35 / --sage-15 〜 --sage-65 / --lavender-35, --lavender-45
+ボーダー:     --border-light / --border-subtle
+スペーシング: --space-xs 〜 --space-xxl
+エレベーション: --shadow-card / --shadow-hover
+ブレークポイント: 1023px (タブレット) / 767px (モバイル) / prefers-reduced-motion
 ```
 
 ## JS モジュール
 
-| ファイル | 役割 | 主な機能 |
-|---------|------|---------|
-| `main.js` | エントリーポイント | 全モジュールを DOMContentLoaded 後に初期化 |
-| `nav.js` | ナビゲーション | モバイルメニュートグル・ドロップダウン・外側クリック閉じ |
-| `animations.js` | アニメーション | `.fade-in` IntersectionObserver・ease-out カウントアップ |
-| `carousel.js` | カルーセル | prev/next・6秒自動送り（手動操作でタイマーリセット） |
-| `accordion.js` | アコーディオン | `aria-expanded` トグル・`hidden` 属性制御 |
-| `filter.js` | フィルター | `data-category` によるカード表示切替 |
-| `cookie.js` | Cookie同意 | localStorage でバナー表示状態管理 |
-| `form.js` | フォーム | 必須チェック・メール形式・ハニーポット・GA4 イベント |
-| `utils.js` | ユーティリティ | フッター著作権年の動的更新 |
+| ファイル | 役割 |
+|---------|------|
+| `main.js` | エントリーポイント。全モジュール初期化 + フッター著作権年表示 |
+| `nav.js` | モバイルメニュートグル・ドロップダウン・外側クリック閉じ |
+| `animations.js` | `.fade-in` IntersectionObserver・ease-out カウントアップ |
+| `carousel.js` | prev/next・6秒自動送り（手動操作でタイマーリセット） |
+| `accordion.js` | `aria-expanded` トグル・`hidden` 属性制御 |
+| `filter.js` | `data-category` によるカード表示切替 |
+| `cookie.js` | localStorage でバナー表示状態管理 |
+| `form.js` | 必須チェック・メール形式・ハニーポット・GA4 イベント |
 
 ## 実運用時に接続が必要な項目
 
@@ -150,4 +135,3 @@ npx serve . -l 3000
 | アナリティクス | GA4 / GTM の本番 Measurement ID |
 | Search Console | 本番ドメインで所有権確認 |
 | SNS・連絡先 | 公式 SNS URL・電話番号・事業者所在地 |
-| OGP 画像 | 本番用 OGP 画像ファイル |

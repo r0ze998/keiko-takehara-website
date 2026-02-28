@@ -9,7 +9,6 @@ import { initAccordion } from './accordion.js';
 import { initFilter } from './filter.js';
 import { initCookie } from './cookie.js';
 import { initForm } from './form.js';
-import { initUtils } from './utils.js';
 
 function init() {
   initNav();
@@ -19,7 +18,10 @@ function init() {
   initFilter();
   initCookie();
   initForm();
-  initUtils();
+
+  // Footer copyright year
+  const yearEl = document.querySelector('[data-year]');
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 }
 
 if (document.readyState === 'loading') {

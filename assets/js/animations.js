@@ -35,10 +35,11 @@ export function initAnimations() {
           const duration = 1200;
           const start = performance.now();
 
+          const hasDecimal = to % 1 !== 0;
           const tick = (now) => {
             const raw = Math.min((now - start) / duration, 1);
-            const value = Math.floor(to * easeOutCubic(raw));
-            el.textContent = value.toLocaleString('ja-JP') + suffix;
+            const value = to * easeOutCubic(raw);
+            el.textContent = (hasDecimal ? value.toFixed(1) : Math.floor(value).toLocaleString('ja-JP')) + suffix;
             if (raw < 1) requestAnimationFrame(tick);
           };
 
