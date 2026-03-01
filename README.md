@@ -105,13 +105,20 @@ npx serve . -l 3000
 デザイントークンを `:root` で一元管理し、色・透明度バリエーションもCSS変数化しています。
 
 ```
-パレット:     --color-forest (#ff6347) / --color-gold / --color-ivory / --color-navy / --color-sage / --color-lavender
-透明度:       --forest-5 〜 --forest-35 / --sage-15 〜 --sage-65 / --lavender-35, --lavender-45
-ボーダー:     --border-light / --border-subtle
-スペーシング: --space-xs 〜 --space-xxl
+パレット:       --color-forest (#ff6347) / --color-gold / --color-ivory / --color-navy / --color-sage / --color-lavender
+透明度:         --forest-5 〜 --forest-35 / --sage-15 〜 --sage-65 / --lavender-35, --lavender-45
+ボーダー:       --border-light / --border-subtle
+スペーシング:   --space-xs 〜 --space-xxl
 エレベーション: --shadow-card / --shadow-hover
+ユーティリティ: .mt-md / .is-hidden / .visually-hidden
 ブレークポイント: 1023px (タブレット) / 767px (モバイル) / prefers-reduced-motion
 ```
+
+コンポーネントスコーピング:
+- `.blog-article` — ブログ記事本文のスタイル（グローバルの `article` を汚染しない）
+- `.card > img:first-child` — カード上部のフルブリード画像
+- `figure.card` — padding:0 で画像をカードに密着
+- `.sns-row + .footer-links` — フッターSNSの下にマージン自動付与
 
 ## JS モジュール
 
