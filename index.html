@@ -31,7 +31,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css?v=20260321" />
     <link rel="preload" as="image" href="/assets/images/home/hero-portrait.jpg" />
     <link rel="prefetch" href="/booking/" />
     <link rel="prefetch" href="/services/" />
@@ -107,15 +107,7 @@
           <ul class="nav-list">
             <li><a href="/" aria-current="page">ホーム</a></li>
             <li><a href="/about/">講師紹介</a></li>
-            <li class="nav-group">
-              <button type="button" data-dropdown-toggle aria-expanded="false">サービス</button>
-              <div class="dropdown" role="menu">
-                <a href="/services/">サービス一覧</a>
-                <a href="/services/seminar/">セミナー詳細</a>
-                <a href="/services/counseling/">カウンセリング詳細</a>
-                <a href="/services/corporate/">企業向けサービス</a>
-              </div>
-            </li>
+            <li><a href="/services/">サービス</a></li>
             <li><a href="/testimonials/">実績・声</a></li>
             <li><a href="/blog/">コラム</a></li>
             <li><a href="/faq/">FAQ</a></li>
@@ -130,13 +122,7 @@
       <div class="container mobile-panel" data-mobile-panel>
         <a href="/">ホーム</a>
         <a href="/about/">講師紹介</a>
-        <details>
-          <summary>サービス</summary>
-          <a href="/services/">サービス一覧</a>
-          <a href="/services/seminar/">セミナー詳細</a>
-          <a href="/services/counseling/">カウンセリング詳細</a>
-          <a href="/services/corporate/">企業向けサービス</a>
-        </details>
+        <a href="/services/">サービス</a>
         <a href="/testimonials/">実績・声</a>
         <a href="/blog/">コラム</a>
         <a href="/faq/">FAQ</a>
@@ -149,12 +135,12 @@
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-copy fade-in">
-            <span class="kicker">Mind Balance Seminar</span>
-            <h1>静けさの中に、
-              あなた本来の力を取り戻す。</h1>
+            <span class="kicker">MIROSS</span>
+            <h1>人生の問題は、<br />本来の自分に戻るサイン。</h1>
             <p class="lead">
-              忙しい毎日の中でも、呼吸を整えるように心を整える。講師・竹原恵子が、
-              セミナーとカウンセリングを通して「自分を責めない心の習慣」をお届けします。
+              中国・アメリカで特許取得の<br />
+              心のバランスを整えるシステム「MIROSS」に基づき<br />
+              家族関係の変容をサポートしています。
             </p>
             <div class="hero-cta">
               <a class="btn btn-primary" href="/booking/">講座を探す</a>
@@ -179,6 +165,51 @@
         </div>
       </section>
 
+      <section class="curriculum-section fade-in">
+        <div class="container">
+          <div class="curriculum-card">
+            <div class="curriculum-header">
+              <span class="curriculum-kicker">SCHEDULE</span>
+              <h2 class="curriculum-title">近日開催のカリキュラム</h2>
+              <p class="curriculum-desc">初めての方も、学びを深めたい方も。<br>あなたに合った講座をお選びいただけます。</p>
+            </div>
+            <div class="curriculum-grid">
+              <a class="curriculum-item" href="https://www.mirossacademy.com/sche/index.php?seek_category=LifeKeiko_Takehara" target="_blank" rel="noopener noreferrer">
+                <span class="curriculum-icon">&#9672;</span>
+                <span class="curriculum-name">LIFEコース</span>
+                <span class="curriculum-arrow">&rarr;</span>
+              </a>
+              <a class="curriculum-item" href="https://www.mirossacademy.com/sche/index.php?seek_category=syuutyuu-Keiko_Takehara" target="_blank" rel="noopener noreferrer">
+                <span class="curriculum-icon">&#9670;</span>
+                <span class="curriculum-name">集中講座</span>
+                <span class="curriculum-arrow">&rarr;</span>
+              </a>
+              <a class="curriculum-item" href="https://www.mirossacademy.com/sche/index.php?seek_category=miross_counseling-Keiko_Takehara" target="_blank" rel="noopener noreferrer">
+                <span class="curriculum-icon">&#9676;</span>
+                <span class="curriculum-name">カウンセリング</span>
+                <span class="curriculum-arrow">&rarr;</span>
+              </a>
+              <a class="curriculum-item" href="https://www.mirossacademy.com/sche/index.php?seek_category=taikan-Keiko_Takehara" target="_blank" rel="noopener noreferrer">
+                <span class="curriculum-icon">&#9674;</span>
+                <span class="curriculum-name">体感講座</span>
+                <span class="curriculum-arrow">&rarr;</span>
+              </a>
+              <a class="curriculum-item" href="https://www.mirossacademy.com/sche/index.php?seek_category=remote-seminar-Keiko_Takehara" target="_blank" rel="noopener noreferrer">
+                <span class="curriculum-icon">&#9673;</span>
+                <span class="curriculum-name">リモートセミナー</span>
+                <span class="curriculum-arrow">&rarr;</span>
+              </a>
+            </div>
+            <div class="curriculum-footer">
+              <a class="btn btn-primary btn-external" href="https://www.mirossacademy.com/sche/index.php?seek_category=keiko_takehara" target="_blank" rel="noopener noreferrer">
+                全てのスケジュールを見る
+                <svg class="icon-external" viewBox="0 0 16 16" aria-hidden="true"><path d="M12 4L4 12M12 4H6M12 4v6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="page-section fade-in">
         <div class="container grid-2">
           <div>
@@ -189,13 +220,50 @@
               仕組みを理解して扱えるようになることで、仕事・家族・人間関係の中に穏やかな選択が生まれます。
             </p>
           </div>
-          <figure class="card">
+          <figure class="card card-concept">
             <img
               src="/assets/images/home/concept-kyoto.jpg"
-              alt="桜の川辺に佇む竹原恵子"
+              alt="月のオブジェと竹原恵子"
               loading="lazy"
             />
           </figure>
+        </div>
+      </section>
+
+      <section class="patent-section fade-in">
+        <div class="container">
+          <div class="patent-card">
+            <div class="patent-ornament" aria-hidden="true"></div>
+            <div class="patent-inner">
+              <span class="patent-kicker">INTERNATIONAL PATENT</span>
+              <h2 class="patent-heading">心（人間の意識）の分野で<br>国際特許を取得</h2>
+              <p class="patent-body">
+                受講者の人生が好転した実績が科学的に認められ、<br>
+                人間の意識の分野において<strong>米国・中国の2カ国</strong>で特許を取得。<br>
+                世界が認めたメソッドで、あなたの変容をサポートします。
+              </p>
+              <div class="patent-badges">
+                <a class="patent-badge" href="https://www.mirossinstitute.co.jp/article/news_release/ns20201112" target="_blank" rel="noopener noreferrer">
+                  <span class="patent-seal" aria-hidden="true">
+                    <svg viewBox="0 0 80 80" width="60" height="60"><circle cx="40" cy="40" r="36" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="40" cy="40" r="30" fill="none" stroke="currentColor" stroke-width="0.8"/><text x="40" y="36" text-anchor="middle" font-size="8" font-weight="600" fill="currentColor" font-family="serif">U.S.</text><text x="40" y="48" text-anchor="middle" font-size="7" fill="currentColor" font-family="serif">PATENT</text></svg>
+                  </span>
+                  <span class="patent-detail">
+                    <span class="patent-country">United States</span>
+                    <span class="patent-status">米国特許取得</span>
+                  </span>
+                </a>
+                <a class="patent-badge" href="https://www.mirossinstitute.co.jp/article/news_release/ns20210726" target="_blank" rel="noopener noreferrer">
+                  <span class="patent-seal" aria-hidden="true">
+                    <svg viewBox="0 0 80 80" width="60" height="60"><circle cx="40" cy="40" r="36" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="40" cy="40" r="30" fill="none" stroke="currentColor" stroke-width="0.8"/><text x="40" y="36" text-anchor="middle" font-size="8" font-weight="600" fill="currentColor" font-family="serif">CHINA</text><text x="40" y="48" text-anchor="middle" font-size="7" fill="currentColor" font-family="serif">PATENT</text></svg>
+                  </span>
+                  <span class="patent-detail">
+                    <span class="patent-country">China</span>
+                    <span class="patent-status">中国特許取得</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -255,54 +323,54 @@
         <div class="container">
           <div class="section-divider"></div>
           <h2>お客様の声</h2>
-          <div class=”testimonial-carousel” aria-roledescription=”carousel”>
-            <div class=”testimonial-track” data-carousel-track>
-              <div class=”testimonial-item” data-carousel-slide>
-                <article class=”quote-card”>
-                  <p class=”quote-mark” aria-hidden=”true”>”</p>
+          <div class="testimonial-carousel" aria-roledescription="carousel">
+            <div class="testimonial-track" data-carousel-track>
+              <div class="testimonial-item" data-carousel-slide>
+                <article class="quote-card">
+                  <p class="quote-mark" aria-hidden="true">"</p>
+                  <p>恵子先生に「分岐点」という言葉をいただき、ジワジワと嬉しさが込み上げ涙しました。初めてと言って良いほど心の内側からマイナスに感謝が溢れ幸せな気持ちになりました。</p>
+                  <p class="testimonial-meta">M.K.さん / カウンセリング / 2026年</p>
+                  <p class="stars" aria-label="5点満点中5点">★★★★★</p>
+                </article>
+              </div>
+              <div class="testimonial-item" data-carousel-slide>
+                <article class="quote-card">
+                  <p class="quote-mark" aria-hidden="true">"</p>
+                  <p>命の誕生の神秘からNEO HUMANという生き方に至るまで丁寧に聞かせて頂きました。恵子先生の体験も通しながら、ブレずに伝えようとされる思いがひしひしと伝わり、空間が愛そのもの。受講できて本当に良かったです。</p>
+                  <p class="testimonial-meta">田中奈穂さん / 集中講座 / 2026年</p>
+                  <p class="stars" aria-label="5点満点中5点">★★★★★</p>
+                </article>
+              </div>
+              <div class="testimonial-item" data-carousel-slide>
+                <article class="quote-card">
+                  <p class="quote-mark" aria-hidden="true">"</p>
+                  <p>自分が表現しきれなかったことは、目の前の自分（LIFEの仲間）が持っていました。四回を共に過ごした仲間たちは最終日には画面越しに互いをハグして泣き笑い、共鳴しました。生きる事は楽しすぎる。</p>
+                  <p class="testimonial-meta">S.T.さん / Lifeコース / 2026年</p>
+                  <p class="stars" aria-label="5点満点中5点">★★★★★</p>
+                </article>
+              </div>
+              <div class="testimonial-item" data-carousel-slide>
+                <article class="quote-card">
+                  <p class="quote-mark" aria-hidden="true">"</p>
+                  <p>自分が自分を嫌っていたことを受け取った瞬間、重たい鎧が溶け、軽い感覚になりました。両親を嫌っていたことは究極は自分が自分を嫌っていた。衝撃でした。</p>
+                  <p class="testimonial-meta">K.A.さん / リモートセミナー / 2026年</p>
+                  <p class="stars" aria-label="5点満点中5点">★★★★★</p>
+                </article>
+              </div>
+              <div class="testimonial-item" data-carousel-slide>
+                <article class="quote-card">
+                  <p class="quote-mark" aria-hidden="true">"</p>
+                  <p>失っていた存在の立ち上がり、記憶を呼び覚ます集中講座の空間に感動でした。全てが完全性の中であることをすごく感じられました。存在勝組、生まれてきただけで大成功！</p>
+                  <p class="testimonial-meta">M.N.さん / 集中講座 / 2026年</p>
+                  <p class="stars" aria-label="5点満点中5点">★★★★★</p>
+                </article>
+              </div>
+              <div class="testimonial-item" data-carousel-slide>
+                <article class="quote-card">
+                  <p class="quote-mark" aria-hidden="true">"</p>
                   <p>恵子先生のカウンセリングを申し込んでほんの数日後、事態は動き出していました。止まっていた工事が急展開し、お客様からもダダダーっと注文をいただくということが起きました。</p>
-                  <p class=”testimonial-meta”>M.Y.さん / カウンセリング / 2025年</p>
-                  <p class=”stars” aria-label=”5点満点中5点”>★★★★★</p>
-                </article>
-              </div>
-              <div class=”testimonial-item” data-carousel-slide>
-                <article class=”quote-card”>
-                  <p class=”quote-mark” aria-hidden=”true”>”</p>
-                  <p>まさか両親を嫌っていたことは自分を嫌っていたことだったとは。理想やプラス思考、被害者意識、満載の人生でした。思考が作った間違った自己イメージを解放していくことができるようになってきました。</p>
-                  <p class=”testimonial-meta”>山田明弘さん / 体感講座 / 2025年</p>
-                  <p class=”stars” aria-label=”5点満点中5点”>★★★★★</p>
-                </article>
-              </div>
-              <div class=”testimonial-item” data-carousel-slide>
-                <article class=”quote-card”>
-                  <p class=”quote-mark” aria-hidden=”true”>”</p>
-                  <p>楽しい中にも的確にナビゲートしてくださり癒しの時間でした。わたしはこれを知りたくて両親を選んで生まれてきた。実感できました。</p>
-                  <p class=”testimonial-meta”>太田恵さん / カウンセリング / 2025年</p>
-                  <p class=”stars” aria-label=”5点満点中5点”>★★★★★</p>
-                </article>
-              </div>
-              <div class=”testimonial-item” data-carousel-slide>
-                <article class=”quote-card”>
-                  <p class=”quote-mark” aria-hidden=”true”>”</p>
-                  <p>悲しみを感じたくなくて小さくしたことで、喜びも小さくなった。この表裏一体にびっくりしました。幼少時代からの感情の切り方を、このセミナーで知ることができました。</p>
-                  <p class=”testimonial-meta”>原真由美さん / セミナー</p>
-                  <p class=”stars” aria-label=”5点満点中5点”>★★★★★</p>
-                </article>
-              </div>
-              <div class=”testimonial-item” data-carousel-slide>
-                <article class=”quote-card”>
-                  <p class=”quote-mark” aria-hidden=”true”>”</p>
-                  <p>お金にフォーカスしまくっていましたが、不安や恐怖の根本がお金ではない、と強烈に感じました。本来の立ち位置を完全に忘れていたことに気付かされました。</p>
-                  <p class=”testimonial-meta”>上阪英史さん / セミナー</p>
-                  <p class=”stars” aria-label=”5点満点中5点”>★★★★★</p>
-                </article>
-              </div>
-              <div class=”testimonial-item” data-carousel-slide>
-                <article class=”quote-card”>
-                  <p class=”quote-mark” aria-hidden=”true”>”</p>
-                  <p>「自分という理解を変えていく」というレクチャーから、”ダメ人間”という自分のレッテルから解放され、肩の緊張が解ける感じでした。</p>
-                  <p class=”testimonial-meta”>E.M.さん / 体感講座 / 2024年</p>
-                  <p class=”stars” aria-label=”5点満点中5点”>★★★★★</p>
+                  <p class="testimonial-meta">M.Y.さん / カウンセリング / 2025年</p>
+                  <p class="stars" aria-label="5点満点中5点">★★★★★</p>
                 </article>
               </div>
             </div>
@@ -318,41 +386,14 @@
         <div class="container">
           <div class="section-divider"></div>
           <h2>最新コラム</h2>
-          <div class="grid-3">
-            <article class="card blog-card fade-in">
-              <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=960&q=80"
-                alt="整理された棚と温かな光が差し込む部屋"
-                loading="lazy"
-                width="960"
-                height="600"
-              />
-              <h3><a href="/blog/unconscious-clutter/">片付けられないのは誰？ ― 無意識の心に気づく時</a></h3>
-              <p>片付けたいのにできない原因は、意志の弱さではなく無意識の感情。親子関係から紐解く本当の理由を解説します。</p>
-            </article>
-            <article class="card blog-card fade-in">
-              <img
-                src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=960&q=80"
-                alt="静かな湖面に映る空と木々"
-                loading="lazy"
-                width="960"
-                height="600"
-              />
-              <h3><a href="/blog/emotion-mechanism/">感情の仕組みを知ると人間関係が変わる</a></h3>
-              <p>怒りや不安の裏にある本当の感情を理解し、反射的な反応を減らす方法を解説します。</p>
-            </article>
-            <article class="card blog-card fade-in">
-              <img
-                src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=960&q=80"
-                alt="朝の光が差し込む穏やかな部屋"
-                loading="lazy"
-                width="960"
-                height="600"
-              />
-              <h3><a href="/blog/self-esteem-habits/">自己肯定感を育てる5つの小さな習慣</a></h3>
-              <p>日常に取り入れやすい5つの実践で、自己肯定感を少しずつ育てる方法を紹介します。</p>
-            </article>
+          <div class="note-embed-list">
+            <script src="https://note.com/scripts/embed.js" charset="utf-8"></script>
+            <blockquote data-note-url="https://note.com/alyson/n/n6e075e812a96"></blockquote>
           </div>
+          <p style="margin-top:var(--sp-lg);text-align:center"><a class="btn btn-secondary btn-external" href="https://note.com/alyson" target="_blank" rel="noopener noreferrer">
+            note の記事一覧を見る
+            <svg class="icon-external" viewBox="0 0 16 16" aria-hidden="true"><path d="M12 4L4 12M12 4H6M12 4v6"/></svg>
+          </a></p>
         </div>
       </section>
 
@@ -429,6 +470,6 @@
       </div>
     </aside>
 
-    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/main.js?v=20260308"></script>
   </body>
 </html>

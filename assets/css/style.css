@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* ==========================================================================
    Keiko - Design Tokens
    ========================================================================== */
@@ -537,6 +539,276 @@ button.btn {
 .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
 /* ==========================================================================
+   Curriculum Section
+   ========================================================================== */
+.curriculum-section {
+  padding: var(--space-xl) 0 0;
+}
+
+.curriculum-card {
+  background: #fff;
+  border: 1px solid var(--forest-12);
+  border-radius: 18px;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.curriculum-header {
+  text-align: center;
+  padding: clamp(1.5rem, 3vw, 2.2rem) clamp(1.2rem, 3vw, 2rem) 0;
+}
+
+.curriculum-kicker {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.5rem;
+}
+
+.curriculum-title {
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  margin-bottom: 0.5rem;
+}
+
+.curriculum-desc {
+  font-size: 0.92rem;
+  color: #4a5668;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1px;
+  background: var(--forest-8);
+  margin: clamp(1.2rem, 2.5vw, 1.8rem) clamp(1.2rem, 3vw, 2rem);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.curriculum-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 1.1rem;
+  background: var(--color-ivory);
+  text-decoration: none;
+  color: var(--color-navy);
+  transition: background 0.2s ease;
+  min-height: var(--touch-min);
+}
+
+.curriculum-item:is(:hover, :focus-visible) {
+  background: var(--sage-24);
+}
+
+.curriculum-icon {
+  color: var(--color-forest);
+  font-size: 1rem;
+  flex-shrink: 0;
+  width: 1.2rem;
+  text-align: center;
+}
+
+.curriculum-name {
+  flex: 1;
+  font-size: 0.93rem;
+  font-weight: 500;
+}
+
+.curriculum-arrow {
+  color: var(--color-gold);
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.curriculum-item:is(:hover, :focus-visible) .curriculum-arrow {
+  transform: translateX(3px);
+}
+
+.curriculum-footer {
+  text-align: center;
+  padding: 0 clamp(1.2rem, 3vw, 2rem) clamp(1.5rem, 3vw, 2rem);
+}
+
+@media (max-width: 767px) {
+  .curriculum-section {
+    padding: var(--space-lg) 0 0;
+  }
+
+  .curriculum-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Patent Section
+   ========================================================================== */
+.patent-section {
+  padding: 0 0 var(--space-xl);
+}
+
+.patent-card {
+  position: relative;
+  background: linear-gradient(160deg, #0f0f1e 0%, #1a1a2e 40%, #1e1632 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(196, 154, 108, 0.2);
+}
+
+.patent-ornament {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 80% at 90% 50%, rgba(196, 154, 108, 0.1), transparent),
+    radial-gradient(ellipse 40% 60% at 10% 20%, rgba(196, 154, 108, 0.06), transparent);
+  pointer-events: none;
+}
+
+.patent-ornament::before,
+.patent-ornament::after {
+  content: '';
+  position: absolute;
+  border: 1px solid rgba(196, 154, 108, 0.12);
+  border-radius: 999px;
+}
+
+.patent-ornament::before {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  right: -60px;
+}
+
+.patent-ornament::after {
+  width: 200px;
+  height: 200px;
+  bottom: -60px;
+  left: -40px;
+}
+
+.patent-inner {
+  position: relative;
+  z-index: 1;
+  padding: clamp(2.2rem, 4.5vw, 3.5rem) clamp(2rem, 4vw, 3.5rem);
+  text-align: center;
+}
+
+.patent-kicker {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  border: 1px solid rgba(196, 154, 108, 0.35);
+  border-radius: 999px;
+  padding: 0.35rem 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.patent-heading {
+  color: #fff;
+  font-size: clamp(1.4rem, 2.6vw, 2.2rem);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.patent-body {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.93rem;
+  line-height: 2;
+  margin-bottom: 2rem;
+  max-width: 580px;
+  margin-inline: auto;
+}
+
+.patent-body strong {
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.patent-badges {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.patent-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(196, 154, 108, 0.08);
+  border: 1px solid rgba(196, 154, 108, 0.2);
+  border-radius: 16px;
+  padding: 1.2rem 1.6rem;
+  text-decoration: none;
+  color: var(--color-gold);
+  transition: background 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.patent-badge:is(:hover, :focus-visible) {
+  background: rgba(196, 154, 108, 0.15);
+  border-color: rgba(196, 154, 108, 0.4);
+  transform: translateY(-3px);
+}
+
+.patent-seal {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.patent-seal svg {
+  display: block;
+}
+
+.patent-detail {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.patent-country {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.15rem;
+}
+
+.patent-status {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 767px) {
+  .patent-inner {
+    padding: 2rem 1.4rem;
+  }
+
+  .patent-body br {
+    display: none;
+  }
+
+  .patent-badges {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: stretch;
+  }
+
+  .patent-badge {
+    justify-content: center;
+    padding: 1rem 1.2rem;
+  }
+}
+
+/* ==========================================================================
    Components: Cards, Buttons, Forms
    ========================================================================== */
 .card {
@@ -562,11 +834,25 @@ figure.card {
   overflow: hidden;
 }
 
+figure.card > img:first-child,
 figure.card img {
   width: 100%;
-  height: auto;
+  max-height: 420px;
+  margin: 0;
+  border-radius: 0;
   object-fit: cover;
   display: block;
+}
+
+figure.card.card-portrait img {
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center 10%;
+}
+
+figure.card.card-concept img {
+  max-height: none;
+  object-fit: contain;
 }
 
 figure.card figcaption {
@@ -616,16 +902,20 @@ figure.card figcaption {
 .testimonial-carousel {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .testimonial-track {
   display: flex;
+  flex-wrap: nowrap;
   transition: transform 0.4s ease;
+  width: 100%;
 }
 
 .testimonial-item {
-  min-width: 100%;
-  flex-shrink: 0;
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 0.3rem;
 }
 
@@ -827,6 +1117,113 @@ th {
   color: var(--color-forest);
 }
 
+/* Service page — anchor nav & blocks */
+.service-anchor-nav {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background: var(--color-ivory);
+  border-bottom: 1px solid var(--forest-12);
+  padding: 0.7rem 0;
+}
+
+.anchor-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.anchor-list::-webkit-scrollbar { display: none; }
+
+.anchor-list a {
+  display: block;
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--forest-25);
+  color: var(--color-forest);
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.anchor-list a:is(:hover, :focus-visible) {
+  background: var(--color-forest);
+  color: #fff;
+}
+
+.service-block {
+  scroll-margin-top: 4rem;
+}
+
+.service-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--color-forest);
+  line-height: 1;
+  opacity: 0.35;
+}
+
+.service-tag {
+  display: inline-block;
+  margin-left: 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: var(--forest-10);
+  color: var(--color-forest);
+  padding: 0.2em 0.6em;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+.service-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.theme-quote {
+  margin: 0.8rem 0;
+  padding: 0.8rem 1rem;
+  border-left: 3px solid var(--color-forest);
+  background: var(--forest-5);
+  border-radius: 0 8px 8px 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .steps {
   list-style: none;
   padding: 0;
@@ -893,6 +1290,71 @@ th {
 
 .faq-answer {
   padding: 0 1rem 1rem;
+}
+
+/* LINE CTA Banner */
+.line-cta {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1.2rem;
+  background: #fff;
+  border: 2px solid #06C755;
+  border-radius: 16px;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  box-shadow: 0 4px 20px rgba(6, 199, 85, 0.12);
+}
+
+.line-cta-icon {
+  flex-shrink: 0;
+}
+
+.line-cta-heading {
+  font-family: var(--ff-serif);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.line-cta-sub {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0 0;
+}
+
+.btn-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #06C755;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.85rem 1.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-line:hover {
+  background: #05b04c;
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .line-cta {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    gap: 0.8rem;
+  }
+
+  .btn-line {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .filter-row {

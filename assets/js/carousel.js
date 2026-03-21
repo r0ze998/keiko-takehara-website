@@ -14,7 +14,8 @@ export function initCarousel() {
 
   const move = (newIndex) => {
     index = (newIndex + slides.length) % slides.length;
-    track.style.transform = `translateX(-${index * 100}%)`;
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
   };
 
   const startTimer = () => {
@@ -24,6 +25,9 @@ export function initCarousel() {
 
   prev?.addEventListener('click', () => { move(index - 1); startTimer(); });
   next?.addEventListener('click', () => { move(index + 1); startTimer(); });
+
+  // Recalculate position on resize
+  window.addEventListener('resize', () => move(index));
 
   startTimer();
 }
