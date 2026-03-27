@@ -1954,6 +1954,34 @@ input[type='checkbox'] {
   margin: 0;
 }
 
+.sns-link-grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.sns-link-card--youtube .sns-link-icon {
+  background: rgba(255, 0, 0, 0.08);
+}
+
+.sns-litlink-wrap {
+  text-align: center;
+  margin-top: 1.2rem;
+}
+
+.sns-litlink {
+  display: inline-block;
+  color: #6366f1;
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: var(--radius-button);
+  transition: background 0.2s ease;
+}
+
+.sns-litlink:hover {
+  background: rgba(99, 102, 241, 0.06);
+}
+
 .sns-link-arrow {
   margin-left: auto;
   font-size: 1.1rem;
@@ -2379,8 +2407,9 @@ input[type='checkbox'] {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .sns-link-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .sns-link-grid,
+  .sns-link-grid--4 {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .grid-3,
