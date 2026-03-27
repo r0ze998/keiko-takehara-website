@@ -1823,6 +1823,62 @@ input[type='checkbox'] {
   font-weight: 500;
 }
 
+/* Note article cards */
+.note-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.note-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--forest-12);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--color-navy);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.note-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.note-card-body {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.note-card-body time {
+  font-size: 0.78rem;
+  color: #999;
+  font-weight: 500;
+}
+
+.note-card-body h3 {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.note-cta {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
 /* SNS link grid (blog page) */
 .sns-section-lead {
   color: #555;
@@ -2319,6 +2375,10 @@ input[type='checkbox'] {
     grid-template-columns: 1fr 1fr;
   }
 
+  .note-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .sns-link-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -2445,6 +2505,10 @@ input[type='checkbox'] {
   }
 
   .voice-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .note-grid {
     grid-template-columns: 1fr;
   }
 
