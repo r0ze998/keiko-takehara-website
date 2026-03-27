@@ -1789,6 +1789,143 @@ input[type='checkbox'] {
   margin-top: 1rem;
 }
 
+/* ==========================================================================
+   Upcoming Curriculum Highlight
+   ========================================================================== */
+.upcoming-section {
+  padding: 2.5rem 0 1.5rem;
+}
+
+.upcoming-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.upcoming-header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.upcoming-pulse {
+  width: 12px;
+  height: 12px;
+  background: var(--color-forest);
+  border-radius: 50%;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 99, 71, 0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(255, 99, 71, 0); }
+}
+
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.upcoming-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.3rem;
+  background: #fff;
+  border: 1px solid var(--forest-12);
+  border-radius: var(--radius-card);
+  text-decoration: none;
+  color: var(--color-navy);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.upcoming-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-forest);
+}
+
+.upcoming-card--featured {
+  background: linear-gradient(135deg, var(--forest-5) 0%, #fff 60%);
+  border: 2px solid var(--color-forest);
+  grid-row: span 1;
+}
+
+.upcoming-badge {
+  display: inline-block;
+  width: fit-content;
+  background: var(--color-forest);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.6rem;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+}
+
+.upcoming-card--featured .upcoming-badge {
+  background: var(--color-forest);
+}
+
+.upcoming-date {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-forest);
+}
+
+.upcoming-card h3 {
+  font-size: 1.1rem;
+  margin: 0.15rem 0 0;
+}
+
+.upcoming-card--featured h3 {
+  font-size: 1.25rem;
+}
+
+.upcoming-card p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.upcoming-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.upcoming-price small {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #777;
+}
+
+.upcoming-cta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-forest);
+  margin-top: 0.3rem;
+  transition: letter-spacing 0.2s ease;
+}
+
+.upcoming-card:hover .upcoming-cta {
+  letter-spacing: 0.03em;
+}
+
+.upcoming-lead {
+  color: #555;
+  margin: -0.5rem 0 1.5rem;
+}
+
+.upcoming-all {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
 .video-embed {
   position: relative;
   width: 100%;
@@ -2053,6 +2190,10 @@ input[type='checkbox'] {
     grid-template-columns: 1fr;
   }
 
+  .upcoming-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .grid-3,
   .grid-4,
   .testimonial-grid,
@@ -2164,6 +2305,14 @@ input[type='checkbox'] {
   select,
   textarea {
     font-size: 16px;
+  }
+
+  .upcoming-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .upcoming-card--featured {
+    grid-row: auto;
   }
 
   .form-group-pair {
