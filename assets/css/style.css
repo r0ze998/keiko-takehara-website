@@ -1831,6 +1831,90 @@ input[type='checkbox'] {
   margin-bottom: 1.5rem;
 }
 
+/* Video course banner */
+.video-course-banner {
+  background: linear-gradient(135deg, var(--forest-5) 0%, var(--color-ivory) 100%);
+  border: 2px solid var(--color-forest);
+  border-radius: 16px;
+  padding: 2.5rem;
+}
+
+.video-course-content {
+  max-width: 680px;
+}
+
+.video-course-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.video-course-head h2 {
+  margin: 0;
+}
+
+.video-course-content > p {
+  color: #444;
+  line-height: 1.7;
+  margin: 0 0 1.2rem;
+}
+
+.video-course-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.video-course-points span {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid var(--forest-15);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  color: var(--color-navy);
+}
+
+.video-course-compare {
+  margin-bottom: 1.5rem;
+}
+
+.video-course-compare-note {
+  font-size: 0.84rem;
+  color: #777;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.compare-table {
+  overflow-x: auto;
+}
+
+.compare-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid var(--forest-12);
+  text-align: left;
+}
+
+.compare-table thead th {
+  font-weight: 600;
+  background: var(--forest-5);
+}
+
+.compare-table thead th:first-child {
+  width: 5rem;
+}
+
 .note-card {
   display: flex;
   flex-direction: column;
@@ -2531,6 +2615,10 @@ input[type='checkbox'] {
 
   .upcoming-card--featured {
     grid-row: auto;
+  }
+
+  .video-course-banner {
+    padding: 1.5rem;
   }
 
   .voice-cards {
